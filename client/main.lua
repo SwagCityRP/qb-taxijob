@@ -301,7 +301,7 @@ RegisterNetEvent("qb-taxi:client:TakeVehicle", function(data)
         if CanSpawn then
             QBCore.Functions.SpawnVehicle(data.model, function(veh)
                 SetVehicleNumberPlateText(veh, "TAXI"..tostring(math.random(1000, 9999)))
-                exports['LegacyFuel']:SetFuel(veh, 100.0)
+                exports['lj-fuel']:SetFuel(veh, 100.0)
                 closeMenuFull()
                 SetEntityHeading(veh, Config.CabSpawns[SpawnPoint].w)
                 TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
